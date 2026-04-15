@@ -179,7 +179,7 @@ export function GameView({ playerId, playerName, playerColor, gameState }: Props
               <div className="inline-block bg-gray-800/90 backdrop-blur rounded-xl px-4 py-2 text-sm">
                 {gameState.roundWinner.isConsolation ? (
                   <span className="text-yellow-400">
-                    🥈 Closest guess: <strong>{gameState.roundWinner.playerName}</strong> (+{gameState.roundWinner.score}), the answer was {currentQuestion.answer}.
+                    🥈 Closest guess: <strong>{gameState.roundWinner.playerName}</strong> (+{gameState.roundWinner.score}), the answer was {currentQuestion?.answer ?? "Unknown"}.
                   </span>
                 ) : (
                   <span className="text-green-400">
